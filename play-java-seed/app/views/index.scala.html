@@ -1,0 +1,15 @@
+@()
+@import helper._
+
+@main("Welcome to Play") {
+  <h1>Choose a file for input:</h1>
+	@form(action = CSRF(routes.HomeController.fileUpload()), 'enctype -> "multipart/form-data") {
+	
+	    <input type="file" name="file" method="post">
+	
+	    <p>
+	        <input type="submit">
+	    </p>
+	
+	}
+}
